@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Crypto App</title>
+
+</head>
+
+<body>
+
+	<h1>Welcome to Crypto App</h1>
+
+	<p>Buy and sell cryptocurrencies with ease.</p>
+
+	<p><a href="/buy">Buy</a> | <a href="/sell">Sell</a></p>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Buy Cryptocurrency</title>
+
+</head>
+
+<body>
+
+	<h1>Buy Cryptocurrency</h1>
+
+	{% if message %}
+
+		<p>{{ message }}</p>
+
+	{% endif %}
+
+	<form method="POST">
+
+		<label for="currency">Currency:</label>
+
+		<select id="currency" name="currency">
+
+			<option value="BTC">Bitcoin (BTC)</option>
+
+			<option value="ETH">Ethereum (ETH)</option>
+
+			<option value="LTC">Litecoin (LTC)</option>
+
+		</select><br><br>
+
+		<label for="amount">Amount:</label>
+
+		<input type="text" id="amount" name="amount"><br><br>
+
+		<input type="submit" value="Buy">
+
+	</form>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Sell Cryptocurrency</title>
+
+</head>
+
+<body>
+
+	<h1>Sell Cryptocurrency</h1>
+
+	{% if message %}
+
+		<p>{{ message }}</p>
+
+	{% endif %}
+
+	<form method="POST">
+
+		<label for="currency">Currency:</label>
+
+		<select id="currency" name="currency">
+
+			<option value="BTC">Bitcoin (BTC)</option>
+
+			<option value="ETH">Ethereum (ETH)</option>
+
+			<option value="LTC">Litecoin (LTC)</option>
+
+		</select><br><br>
+
+		<label for="amount">Amount:</label>
+
+		<input type="text" id="amount" name="amount"><br><br>
+
+		<input type="submit" value="Sell">
+
+	</form>
+
+</body>
+
+</html>
