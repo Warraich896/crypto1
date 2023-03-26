@@ -1,0 +1,54 @@
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route('/')
+
+def home():
+
+    return render_template('home.html')
+
+@app.route('/buy', methods=['GET', 'POST'])
+
+def buy():
+
+    if request.method == 'POST':
+
+        currency = request.form['currency']
+
+        amount = request.form['amount']
+
+        # Perform the buy operation and display a success message
+
+        message = f"Bought {amount} {currency} successfully!"
+
+        return render_template('buy.html', message=message)
+
+    else:
+
+        return render_template('buy.html')
+
+@app.route('/sell', methods=['GET', 'POST'])
+
+def sell():
+
+    if request.method == 'POST':
+
+        currency = request.form['currency']
+
+        amount = request.form['amount']
+
+        # Perform the sell operation and display a success message
+
+        message = f"Sold {amount} {currency} successfully!"
+
+        return render_template('sell.html', message=message)
+
+    else:
+
+        return render_template('sell.html')
+
+if __name__ == '__main__':
+
+    app.run(debug=True)
+
